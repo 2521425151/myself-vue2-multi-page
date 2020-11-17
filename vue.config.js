@@ -5,6 +5,12 @@ function configPages(globPath){
     let entries = {}; // 按照vue cli pages的结构生成的对象
     let templatePaths = {}; // 获取所有的html路径
     // 过滤掉 html 和 js 文件之外的文件路径， glob.sync(globPath)： 使用node的glob.sync(path) 同步获取path匹配的所有文件路径，以数组形式
+    
+    /* node glob 参考文档
+    https://www.jianshu.com/p/5274cb9d1fc6
+    https://www.cnblogs.com/liulangmao/p/4552339.html
+    https://github.com/isaacs/node-glob */
+
     /* filterGlobPaths = [
         './src/pages/page1/page1.html',
         './src/pages/page1/page1.js',
