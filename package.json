@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "buildTwo": "vue-cli-service build index && vue-cli-service build mobile",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
