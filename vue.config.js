@@ -18,24 +18,18 @@ function configPages(globPath){
     ] */
     let filterGlobPaths = glob.sync(globPath).filter((item) => { return /(\.html|\.js)$/g.test(item) });
     filterGlobPaths.forEach((entry) => {
-        let tmp = entry.split('/').splice(-2, 1)[0];
-        if(/\.html$/g.test(entry)){
-            templatePaths[tmp] = entry;
-        }else{
-            // 自定义路径名称
-            // const CustomPath = tmp === 'mobile' ? 'h5' : tmp;
-            // entries[CustomPath]={
-            entries[tmp]={
-                entry,
-                template: templatePaths[tmp],
-                filename: tmp + ".html",
-                title: tmp
-            }
-        }    
+        let tmp = entry.split('/').splice(-2, 1)[0];   
+        entries[tmp]={
+            entry,
+            template: "public/index.html",
+            filename: tmp + ".html",
+            title: tmp
+        }
+           
     });
     return entries;
 }
-let pages = configPages('./src/pages/**?/*');
+let pages = configPages('./src/pages/**?/index.js');
 console.log(pages);
 //配置end
 module.exports = {

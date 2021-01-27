@@ -1,8 +1,8 @@
 <template>
   <div id="app">
 		<div id="nav">
-			<router-link to="/mobile">mobile</router-link> | 
-			<router-link to="/mobile2">mobile2</router-link>
+			<router-link to="/index">index</router-link> | 
+			<router-link to="/mobile">mobile</router-link>
 		</div>
 		<router-view/>
   </div>
